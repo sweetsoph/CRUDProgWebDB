@@ -38,11 +38,11 @@
 			</li>
 			<li id='consulta'><a>Consulta</a>
 				<ul>
-					<li><a href='../DataConsult/consultaCliente.php'>Clientes</a></li>
-					<li><a href='../DataConsult/consultaFuncionario.php'>Funcionários</a></li>
-					<li><a href='../DataConsult/consultaFornecedore.php'>Fornecedores</a></li>
-					<li><a href='../DataConsult/consultaProduto.php'>Produtos</a></li>
-					<li><a href='../DataConsult/consultaUsuario.php'>Usuários</a></li>
+					<li><a href='../DataConsult/Cliente/consultaCliente.php'>Clientes</a></li>
+					<li><a href='../DataConsult/Funcionario/consultaFuncionario.php'>Funcionários</a></li>
+					<li><a href='../DataConsult/Fornecedor/consultaFornecedore.php'>Fornecedores</a></li>
+					<li><a href='../DataConsult/Produto/consultaProduto.php'>Produtos</a></li>
+					<li><a href='../DataConsult/Usuario/consultaUsuario.php'>Usuários</a></li>
 				</ul>
 			</li>
 			<li><a href='login.php'>Sair</a></li>
@@ -60,48 +60,40 @@
 						<div id='form-cad'>
 							<div class='form-group'>
 								<label>Nome: </label>
-								<input type="text" id="nomeCliente" name="nomeCliente" maxlength="50" required>
+								<input type="text" id="nomeFuncionario" name="nomeFuncionario" maxlength="50" required>
 							</div>
 							<div class='form-group'>
 								<label>CPF: </label>
-								<input type="text" id="cpfCliente" name="cpfCliente" onkeypress="$(this).mask('000.000.000-00')" maxlength='11' required>
+								<input type="text" id="cpfFuncionario" name="cpfFuncionario" onkeypress="$(this).mask('000.000.000-00')" maxlength='11' required>
 							</div>
 							<div class='form-group'>
 								<label>RG: </label>
-								<input type="text" id="rgCliente" name="rgCliente" onkeypress="$(this).mask('00.000.000-0')" maxlength='9' required>
+								<input type="text" id="rgFuncionario" name="rgFuncionario" onkeypress="$(this).mask('00.000.000-0')" maxlength='9' required>
+							</div>
+							<div class='form-group'>
+								<label>Dt. de Admissão: </label>
+								<input type="date" id="dtAdmissao" name="dtAdmissao" onkeypress="$(this).mask('00/00/00')" maxlength='6' required>
+							</div>
+							<div class='form-group'>
+								<label>Salário: </label>
+								<input type="text" id="salario" name="salario" step='0,01' maxlength='8' required>
 							</div>
 							<div class='form-group'>
 								<label>CEP: </label>
-								<input type="text" id="cep" name="cepCliente" onblur="pesquisacep(this.value);" onkeypress="$(this).mask('#####-###')" maxlength="
+								<input type="text" id="cep" name="cepFuncionario" onblur="pesquisacep(this.value);" onkeypress="$(this).mask('#####-###')" maxlength="
                             9" required>
 							</div>
 							<div class='form-group'>
-								<label>Rua: </label>
-								<input type="text" id="rua" name="ruaCliente" required>
-							</div>
-							<div class='form-group'>
-								<label>Bairro: </label>
-								<input type="text" id="bairro" name="bairroCliente" required>
-							</div>
-							<div class='form-group'>
-								<label>Cidade: </label>
-								<input type="text" id="cidade" name="cidadeCliente" required>
-							</div>
-							<div class='form-group'>
-								<label>Estado: </label>
-								<input type="text" id="uf" name="ufCliente" required>
-							</div>
-							<div class='form-group'>
 								<label>Nº: </label>
-								<input type="text" id="numCliente" name="numCliente" onkeypress="$(this).mask('#')" pattern="[0-9]+$" maxlength="10" required>
+								<input type="text" id="numFuncionario" name="numFuncionario" onkeypress="$(this).mask('#')" pattern="[0-9]+$" maxlength="10" required>
 							</div>
 							<div class='form-group'>
 								<label>Celular: </label>
-								<input type="text" id="celularCliente" name="celularCliente" onkeypress="$(this).mask('(00) 90000-0000')" maxlength="11" required>
+								<input type="text" id="celularFuncionario" name="celularFuncionario" onkeypress="$(this).mask('(00) 90000-0000')" maxlength="11" required>
 							</div>
 							<div class='form-group'>
 								<label>Email: </label>
-								<input type="text" id="emailCliente" name="emailCliente" maxlength="40" required>
+								<input type="text" id="emailFuncionario" name="emailFuncionario" maxlength="40" required>
 							</div>
 						</div>
 						<div class="group-buttons">
@@ -121,24 +113,28 @@
 <?php
 
 if (!empty($_POST)) {
-	$nome = $_POST['nomeCliente'];
-	$cpf = $_POST['cpfCliente'];
-	$rg = $_POST['rgCliente'];
-	$cep = $_POST['cepCliente'];
-	$num = $_POST['numCliente'];
-	$celular = $_POST['celularCliente'];
-	$email = $_POST['emailCliente'];
+	$nome = $_POST['nomeFuncionario'];
+	$cpf = $_POST['cpfFuncionario'];
+	$rg = $_POST['rgFuncionario'];
+	$dtAdmissao = $_POST['dtAdmissao'];
+	$salario = $_POST['salario'];
+	$cep = $_POST['cepFuncionario'];
+	$num = $_POST['numFuncionario'];
+	$celular = $_POST['celularFuncionario'];
+	$email = $_POST['emailFuncionario'];
 
-	include_once('../conexao.php');
+	include_once('../../conexao.php');
 
 	try {
 
-		$stmt = $conn->prepare("INSERT INTO cliente (nome, cpf, rg, cep, numero, celular, email)
-	  	                      VALUES (:nome, :cpf, :rg, :cep, :numero, :celular, :email)");
+		$stmt = $conn->prepare("INSERT INTO funcionario (nome, cpf, rg, dtAdmissao, vlSalario, cep, numero, celular, email)
+	  	                      VALUES (:nome, :cpf, :rg, :dtAdmissao, :salario, :cep, :numero, :celular, :email)");
 
 		$stmt->bindParam(':nome', $nome);
 		$stmt->bindParam(':cpf', $cpf);
 		$stmt->bindParam(':rg', $rg);
+		$stmt->bindParam(':dtAdmissao', $dtAdmissao);
+		$stmt->bindParam(':salario', $salario);
 		$stmt->bindParam(':cep', $cep);
 		$stmt->bindParam(':numero', $num);
 		$stmt->bindParam(':celular', $celular);

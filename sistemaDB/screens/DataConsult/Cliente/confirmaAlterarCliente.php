@@ -1,17 +1,17 @@
 <?php
 
-include_once('../../conexao.php');
+include_once('../../../conexao.php');
 
 
 
 $cod = $_POST['codigo']; 
-$nome = $_POST['nome'];
-$cpf = $_POST['cpf'];
-$rg = $_POST['rg'];
-$cep = $_POST['cep'];
-$num = $_POST['numero'];
-$email = $_POST['email'];
-$cel = $_POST['celular'];
+$nome = $_POST['nomeCliente'];
+$cpf = $_POST['cpfCliente'];
+$rg = $_POST['rgCliente'];
+$cep = $_POST['cepCliente'];
+$num = $_POST['numCliente'];
+$email = $_POST['emailCliente'];
+$cel = $_POST['celularCliente'];
 
 	try 
 	{
@@ -22,9 +22,9 @@ $cel = $_POST['celular'];
 													  cep = :cep,
 													  numero = :num,
                                                       email = :email,
-													  celular = :cel WHERE codigo = :id");
+													  celular = :cel WHERE codigo = :cod");
 
-		$stmt->execute(array(':id' => $cod, 
+		$stmt->execute(array(':cod' => $cod, 
 							 ':nome' => $nome,
 							 ':cpf' => $cpf,
 							 ':rg' => $rg,
@@ -47,8 +47,3 @@ $cel = $_POST['celular'];
 		echo 'Error: ' . $e->getMessage();
 
 	}
-
-	
-
- ?>
-

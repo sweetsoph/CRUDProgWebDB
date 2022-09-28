@@ -9,7 +9,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 	<link href="../../assets/styles/style.css" rel="stylesheet" />
-	<link href="../../assets/styles/formCadCliente.css" rel="stylesheet" />
+	<link href="../../assets/styles/forms.css" rel="stylesheet" />
 
 	<title>Cadastro de Cliente</title>
 
@@ -38,11 +38,11 @@
 			</li>
 			<li id='consulta'><a>Consulta</a>
 				<ul>
-					<li><a href='../DataConsult/consultaCliente.php'>Clientes</a></li>
-					<li><a href='../DataConsult/consultaFuncionario.php'>Funcionários</a></li>
-					<li><a href='../DataConsult/consultaFornecedore.php'>Fornecedores</a></li>
-					<li><a href='../DataConsult/consultaProduto.php'>Produtos</a></li>
-					<li><a href='../DataConsult/consultaUsuario.php'>Usuários</a></li>
+					<li><a href='../DataConsult/Cliente/consultaCliente.php'>Clientes</a></li>
+					<li><a href='../DataConsult/Funcionario/consultaFuncionario.php'>Funcionários</a></li>
+					<li><a href='../DataConsult/Fornecedor/consultaFornecedor.php'>Fornecedores</a></li>
+					<li><a href='../DataConsult/Produto/consultaProduto.php'>Produtos</a></li>
+					<li><a href='../DataConsult/Usuario/consultaUsuario.php'>Usuários</a></li>
 				</ul>
 			</li>
 			<li><a href='login.php'>Sair</a></li>
@@ -129,7 +129,7 @@ if (!empty($_POST)) {
 	$celular = $_POST['celularCliente'];
 	$email = $_POST['emailCliente'];
 
-	include_once('../conexao.php');
+	include_once('../../conexao.php');
 
 	try {
 

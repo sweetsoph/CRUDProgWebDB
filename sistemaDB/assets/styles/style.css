@@ -101,7 +101,8 @@ main{
     justify-content: space-between;
     align-items: center;
     width: 1000px;
-    height: 300px;
+    min-height: 300px;
+    max-height: fit-content;
     border: #E4A16E 2px solid;
     flex-wrap: wrap;
     background-color: #fcfcfc;
@@ -158,18 +159,20 @@ h1{
 }
 @media(max-width: 1004px){
     #form article img{
-        display: flex;
-        width: 300px;
+        width: 290px;
     }
     #form{
         width: 900px;
-        height: 100%;
     }
 }
 @media(max-width: 879px){
+    #form article img{
+        display: none;
+    }
     #form{
         width: 300px;
         background-color: white;
+        height: fit-content;
     }
     .form-group{
         justify-content: left;
@@ -179,6 +182,7 @@ h1{
         text-align: left;
     }
     main{
+        margin-top: 100px;
         height: 130vh;
     }
 }

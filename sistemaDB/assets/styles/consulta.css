@@ -1,0 +1,37 @@
+body{
+    display: block;
+    overflow-x: hidden;
+}
+main{
+    display: flex;
+    align-items: flex-start;
+    width: 100vw;
+}
+.container-consulta{
+    margin-top: 120px;
+    transform: skewY(11deg);
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    max-width: 90%;
+    height: fit-content;
+    background-color: #fafafa;
+    border: 0.5px solid #E4A16E;
+}
+.group-consulta{
+    display: flex;
+    flex-direction: row;
+}
+label{
+    border: 0.5px solid #E4A16E;
+    padding: 5px 10px;
+}
+button{
+    border: 1px solid #E4A16E;
+    background-image: linear-gradient(45deg, #E4A16E, #F1C49A);
+    min-width: 80px; max-width: 80px;
+}
+button:hover{
+    background-image: linear-gradient(45deg, #F1C49A, #E4A16E);
+    cursor: pointer;
+}
