@@ -1,0 +1,13 @@
+body{
+    display: block;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 100vw;
+}
+.group-consulta{
+    display: flex;
+    flex-direction: column;
+}

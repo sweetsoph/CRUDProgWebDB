@@ -1,0 +1,207 @@
+body{
+    margin: 0; padding: 0;
+    font-family: 'Raleway', sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+header{
+    background-color: #fafafa;
+    border: 2px solid #f3f3f3;
+    display: flex;
+    height: 70px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-shadow: 0 0 10px 1px rgba(167, 167, 167, 0.5);
+    position: fixed;
+    z-index: 3;
+}
+#logo, nav{
+    display: flex;
+    font-family: sans-serif;
+    font-size: 30px;
+    color: white;
+    align-items: center;
+}
+#logo a{
+    text-decoration: none;
+    color: #E4A16E;
+    display: flex;
+    height: 70px;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    background-color: #fafafa;
+}
+#logo a:hover{
+    opacity: 0.8;
+}
+nav{
+    list-style: none;
+    background-color: #fafafa;
+}
+li a{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    padding: 0px 40px;
+    height: 70px;
+    text-decoration: none;
+    color: black;
+}
+li a:hover{
+    transition: 0.2s;
+    background-color: #f4f4f4;
+    cursor: pointer;
+}
+ul li a:hover{
+    transition: 0.5s;
+}
+ul{
+    display: none;
+    border: 1px solid #f3f3f3;
+}
+#cadastro:hover > ul, #consulta:hover > ul{
+    position: absolute;
+    margin: 0; padding: 0;
+    display: inline-block;
+    background-color: #fafafa;
+    list-style: none;
+}
+
+/*
+MAIN
+*/
+
+#container-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #fafafa;
+}
+main{
+    display: flex;
+    height: 80vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(45deg, #A5CB89, #C8CFA5);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: skewY(-11deg);
+}
+#form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1000px;
+    height: 300px;
+    border: #E4A16E 2px solid;
+    flex-wrap: wrap;
+    background-color: #fcfcfc;
+    transform: skewY(11deg);
+}
+#form article img{
+    height: 300px;
+}
+#form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 575px;
+}
+form #form-cad{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+h1{
+    color: #E4A16E;
+}
+.form-group{
+    justify-content: right;
+    display: flex;
+    width: 260px;
+    margin: 5px;
+    align-items: center;
+}
+.form-group label{
+    margin: 0px 6px;
+}
+.group-buttons{
+    margin: 10px 0;
+    width: 200px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.form-button{
+    background-color: #f3f3f3;
+    border: #E4A16E 2px solid;
+    border-radius: 30px;
+    height: 30px;
+    width: 80px;
+}
+.btnEnviar{
+    background-color: #F1C49A;
+}
+.form-button:hover{
+    background-color: #E4A16E;
+    cursor: pointer;
+}
+@media(max-width: 1004px){
+    #form article img{
+        display: flex;
+        width: 300px;
+    }
+    #form{
+        width: 900px;
+        height: 100%;
+    }
+}
+@media(max-width: 879px){
+    #form{
+        width: 300px;
+        background-color: white;
+    }
+    .form-group{
+        justify-content: left;
+    }
+    label{
+        width: 60px;
+        text-align: left;
+    }
+    main{
+        height: 130vh;
+    }
+}
+@media(max-width:637px){
+    header{
+        height: 50px;
+        font-size: 18px;
+        justify-content: center;
+    }
+    #logo a{
+        height: 50px;
+    }
+    li a{
+        height: 50px;
+        font-size: 15px;
+    }
+    li{
+        width: 80%;
+        text-align: center;
+    }
+    nav{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+}
