@@ -21,7 +21,7 @@
 <body>
 	<header>
 		<section id='logo'>
-			<a href='menu.php'>
+			<a href='../menu.php'>
 				<div><img src="../../assets/images/sophia-verardo.png" width="60"></div>
 				<div>SophDev</div>
 			</a>
@@ -144,7 +144,7 @@ if (!empty($_POST)) {
 	try {
 
 		$stmt = $conn->prepare("INSERT INTO fornecedor (nmEmpresa, nmContato, produto, cnpj, ie, cep, numero, celular, email)
-                              VALUES (:nmEmpresa, :nmContato, :produto, :cnpj, :ie, :cep, :numero, :celular, :email)");
+                              VALUES (:nmEmpresa, :nmContato, :produto, :cnpj, :ie, :cep, :num, :celular, :email)");
 
 		$stmt->bindParam(':nmEmpresa', $nmEmpresa);
         $stmt->bindParam(':nmContato', $nmContato);

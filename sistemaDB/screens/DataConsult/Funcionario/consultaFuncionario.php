@@ -21,7 +21,7 @@
 <body>
 	<header>
 		<section id='logo'>
-			<a href='menu.php'>
+			<a href='../../menu.php'>
 				<div><img src="../../../assets/images/sophia-verardo.png" width="60"></div>
 				<div>SophDev</div>
 			</a>
@@ -38,8 +38,8 @@
 			</li>
 			<li id='consulta'><a>Consulta</a>
 				<ul>
-					<li><a href='consultaCliente.php'>Clientes</a></li>
-					<li><a href='../Funcionario/consultaFuncionario.php'>Funcionários</a></li>
+					<li><a href='../Cliente/consultaCliente.php'>Clientes</a></li>
+					<li><a href='consultaFuncionario.php'>Funcionários</a></li>
 					<li><a href='../Fornecedor/consultaFornecedor.php'>Fornecedores</a></li>
 					<li><a href='../Produto/consultaProduto.php'>Produtos</a></li>
 					<li><a href='../Usuario/consultaUsuario.php'>Usuários</a></li>

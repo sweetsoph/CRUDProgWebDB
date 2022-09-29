@@ -21,7 +21,7 @@
 <body>
 	<header>
 		<section id='logo'>
-			<a href='menu.php'>
+			<a href='../menu.php'>
 				<div><img src="../../assets/images/sophia-verardo.png" width="60"></div>
 				<div>SophDev</div>
 			</a>

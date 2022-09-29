@@ -11,7 +11,7 @@
     <link href="../../../assets/styles/style.css" rel="stylesheet" />
     <link href="../../../assets/styles/excluir.css" rel="stylesheet" />
 
-    <title>Consulta Cliente</title>
+    <title>Excluir Funcionario</title>
 
     <script src='../../buscaCep.js'></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
@@ -21,7 +21,7 @@
 <body>
     <header>
         <section id='logo'>
-            <a href='menu.php'>
+            <a href='../../menu.php'>
                 <div><img src="../../../assets/images/sophia-verardo.png" width="60"></div>
                 <div>SophDev</div>
             </a>

@@ -1,0 +1,14 @@
+main{
+    transform: none;
+    background-image: none;
+    justify-content: space-around;
+}
+main section img{
+    width: 400px;
+}
+h1{
+    font-size: 50px;
+}
+p{
+    font-size: 20px;
+}

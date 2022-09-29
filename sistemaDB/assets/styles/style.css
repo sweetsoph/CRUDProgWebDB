@@ -63,6 +63,7 @@ ul li a:hover{
 ul{
     display: none;
     border: 1px solid #f3f3f3;
+    box-shadow: 0 5px 10px 1px rgba(167, 167, 167, 0.5);
 }
 #cadastro:hover > ul, #consulta:hover > ul{
     position: absolute;
