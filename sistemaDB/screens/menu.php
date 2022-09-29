@@ -29,20 +29,20 @@
         <nav>
             <li id='cadastro'><a>Cadastro</a>
                 <ul>
-                    <li><a href='formCadCliente.php'>Clientes</a></li>
-                    <li><a href='formCadFuncionario.php'>Funcionários</a></li>
-                    <li><a href='formCadFornecedor.php'>Fornecedores</a></li>
-                    <li><a href='formCadProduto.php'>Produtos</a></li>
-                    <li><a href='formCadUsuario.php'>Usuários</a></li>
+                    <li><a href='FormsCad/formCadCliente.php'>Clientes</a></li>
+                    <li><a href='FormsCad/formCadFuncionario.php'>Funcionários</a></li>
+                    <li><a href='FormsCad/formCadFornecedor.php'>Fornecedores</a></li>
+                    <li><a href='FormsCad/formCadProduto.php'>Produtos</a></li>
+                    <li><a href='FormsCad/formCadUsuario.php'>Usuários</a></li>
                 </ul>
             </li>
             <li id='consulta'><a>Consulta</a>
                 <ul>
-                    <li><a href='../DataConsult/Cliente/consultaCliente.php'>Clientes</a></li>
-                    <li><a href='../DataConsult/Funcionario/consultaFuncionario.php'>Funcionários</a></li>
-                    <li><a href='../DataConsult/Fornecedor/consultaFornecedor.php'>Fornecedores</a></li>
-                    <li><a href='../DataConsult/Produto/consultaProduto.php'>Produtos</a></li>
-                    <li><a href='../DataConsult/Usuario/consultaUsuario.php'>Usuários</a></li>
+                    <li><a href='DataConsult/Cliente/consultaCliente.php'>Clientes</a></li>
+                    <li><a href='DataConsult/Funcionario/consultaFuncionario.php'>Funcionários</a></li>
+                    <li><a href='DataConsult/Fornecedor/consultaFornecedor.php'>Fornecedores</a></li>
+                    <li><a href='DataConsult/Produto/consultaProduto.php'>Produtos</a></li>
+                    <li><a href='DataConsult/Usuario/consultaUsuario.php'>Usuários</a></li>
                 </ul>
             </li>
             <li><a href='login.php'>Sair</a></li>
